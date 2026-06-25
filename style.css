@@ -11,6 +11,10 @@ h2{font-size:1.4rem;margin:1.8em 0 .4em;padding-top:.2em}
 h3{font-size:1.12rem;margin:1.4em 0 .3em;color:#333}
 a{color:var(--accent)}
 .lead{color:var(--muted);font-size:1.05rem}
+.course-intro{font-size:1.06rem;color:#2a2f36}
+.course-intro p{margin:0 0 1.05em}
+.course-intro p:first-of-type{font-size:1.12rem;color:#1a1a1a}
+.toc-h{font-size:1.15rem;margin-top:1.9em;padding-bottom:.2em;border-bottom:1px solid var(--line)}
 table{border-collapse:collapse;width:100%;margin:1.2em 0;font-size:.95rem}
 th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
 th{background:#f6f8fa}
