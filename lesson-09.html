@@ -18,18 +18,19 @@ id="lesson-09-from-mechanical-calculation-to-wartime-computing">Lesson
 <p><strong>Module:</strong> 5 — The Computing Revolution ·
 <strong>Hours:</strong> 3 (180 min)</p>
 <h2 id="introduction">Introduction</h2>
-<p>Imagine it is 1943 and your job is to produce a single artillery
-firing table — the page of numbers a gunner uses to aim. It takes a
-trained person with a desk calculator about a month of full days, and
-the army needs thousands of these tables. You do not have thousands of
-months. You have a war.</p>
+<p>It is 1943, and your assignment is a single artillery firing table —
+the page of numbers a gunner consults to aim. Producing one takes a
+trained person at a desk calculator the better part of a month of full
+days, and the army needs them by the thousand, a fresh table for every
+new gun, shell, and angle. You do not have thousands of months. You have
+a war, and it is moving faster than your pencil.</p>
 <p>That gap — between the calculation people needed and the calculation
-people could physically do — is the pressure that bent the history of
-computing. For centuries, “computing” meant a human being grinding
-through arithmetic by hand, occasionally aided by gears and cards. Miss
-how slow and special-purpose those tools were, and the electronic
-machines that followed look like a tidy next step instead of the wartime
-leap they actually were.</p>
+people could physically do — is the pressure that bent the whole history
+of computing. For centuries “computing” meant a human being grinding
+through arithmetic by hand, helped here and there by gears and punched
+cards. Miss how slow and how special-purpose those tools really were,
+and the electronic machines that followed look like a tidy next step
+rather than the wartime leap they actually were.</p>
 <p>In this lesson you will trace the path from mechanical calculators to
 the first electronic computers and on to the single idea — storing
 instructions in memory — that turned a fast calculator into a truly
@@ -54,170 +55,191 @@ possible.</li>
 </ol>
 <h2 id="topic-1-the-mechanical-era-of-calculation">Topic 1 — The
 Mechanical Era of Calculation</h2>
-<p>Begin with a word that has quietly changed meaning. In 1900, a
-<strong>computer</strong> was not a machine at all — it was a
-<em>person</em>, usually one of a roomful of clerks (often women) who
-did long arithmetic by hand for astronomers, insurers, and engineers.
-The whole story of this lesson is the story of how that human job was
-handed off to machines. So start with the machines that tried, and
-mostly failed, to do it.</p>
-<p>The first serious attempt was the work of Charles Babbage. His
-<strong>Difference Engine</strong> was a hand-cranked mechanical
-calculator designed to compute mathematical tables automatically and
-print them without error. What it does is automate one specific kind of
-arithmetic; what it could <em>not</em> do is anything else. His more
-ambitious <strong>Analytical Engine</strong> was a design (never fully
-built in his lifetime) for a general-purpose mechanical computer that
-could be programmed with punched cards, with separate parts for storage
-and processing. Working from that design, Ada Lovelace wrote what is
-often called the first <strong>algorithm</strong> — a precise
-step-by-step procedure for a machine to follow — intended to run on it.
-The idea of a programmable machine, in other words, was conceived
-roughly a century before one could be built.</p>
-<p>A different and far more successful line came from <strong>tabulating
-machines</strong> — electromechanical devices that read holes punched in
-stiff cards to count and sort data. What they do is process records in
-bulk. Herman Hollerith built them to tabulate the 1890 United States
-census, which hand methods could no longer finish before the next census
-began; the same punched-card technology then spread into business data
-processing — payroll, inventory, billing — for decades.</p>
-<p>A third line did not count at all. <strong>Analog computers</strong>
-are machines that <em>model</em> a problem with a continuously varying
-physical quantity rather than with discrete digits. A
-<strong>differential analyzer</strong>, for example, used spinning
-shafts and gears whose rotations stood for changing values, letting
-engineers solve equations by measurement. Naval <strong>fire-control
-devices</strong> used the same idea to compute, mechanically and in real
-time, where a moving ship’s guns should point to hit a moving
-target.</p>
-<p>Here is the common thread made concrete. Every one of these machines
-was <em>special-purpose, slow, and mechanical</em>. The Difference
-Engine could not break a code; a census tabulator could not solve a
-differential equation; a fire-control computer could not run payroll.
-They worked through physical motion — gears meshing, relays clacking —
-not through fast electronic switches. The hunt that follows is a hunt
-for two things these machines lacked: <strong>speed</strong> and
+<p>Walk into the basement of an observatory around 1900 and you would
+find a long room of desks, each occupied by a clerk — very often a woman
+— working a column of figures by hand, page after page, for the
+astronomers upstairs. The job had a title: <strong>computer</strong>.
+The word did not mean a machine. It meant the person grinding through
+the arithmetic. The whole arc of this lesson is the slow handing-off of
+that human job to metal, so begin with the machines that first tried to
+take it — and mostly failed.</p>
+<p>The most famous attempt belonged to Charles Babbage, a restless
+English mathematician who could not bear the errors in printed
+mathematical tables. His <strong>Difference Engine</strong> was a
+hand-cranked mechanical calculator built to compute those tables
+automatically and print them flawlessly, the errors of tired clerks
+engineered out by brass and gears. It did one thing beautifully and
+nothing else. Babbage’s restlessness then carried him further, to a
+design he never fully built: the <strong>Analytical Engine</strong>, a
+general-purpose mechanical computer meant to be programmed with punched
+cards and split, strikingly, into separate parts for storage and for
+processing — the shape of a modern computer sketched in iron a hundred
+years early. Reading his plans, Ada Lovelace worked out what is often
+called the first <strong>algorithm</strong> — a precise step-by-step
+procedure for a machine to follow. The idea of a programmable machine
+had arrived. The machinery to honor it had not, and would not for a
+century.</p>
+<p>A quieter line proved far more useful in its day. <strong>Tabulating
+machines</strong> were electromechanical devices that read holes punched
+in stiff cards to count and sort records in bulk. The pressure that
+produced them was bureaucratic, not scientific: the 1880 United States
+census had taken nearly the full decade to tally by hand, and the 1890
+count threatened to outrun the calendar entirely. Herman Hollerith’s
+punched-card tabulators finished it in a fraction of the time — and the
+same technology marched out of the census office into payroll,
+inventory, and billing, where it processed business records for the next
+half-century. (Hollerith’s firm would, through later mergers, become
+part of IBM.)</p>
+<p>A third line did not count at all; it <em>measured</em>.
+<strong>Analog computers</strong> model a problem with a continuously
+varying physical quantity instead of discrete digits. The
+<strong>differential analyzer</strong> solved equations with spinning
+shafts and gears whose rotations stood in for changing values —
+engineers literally read answers off a machine in motion. Naval
+<strong>fire-control devices</strong> ran on the same principle,
+computing in real time, through clockwork and cams, where a warship’s
+guns should point to land a shell on a moving target miles away.</p>
+<p>One thread ties the three together, and it is worth stating plainly.
+Each machine was <em>special-purpose, slow, and mechanical</em>. The
+Difference Engine could not break a code; a census tabulator could not
+solve a differential equation; a fire-control rig could not run payroll.
+They all worked by moving matter — teeth meshing, arms clacking — and
+matter is heavy and unhurried. What follows is a hunt for the two
+qualities none of them possessed: <strong>speed</strong> and
 <strong>generality</strong>.</p>
 <h2 id="topic-2-war-as-the-forcing-function">Topic 2 — War as the
 Forcing Function</h2>
-<p>You have seen machines that were clever but slow. Now add the one
-thing that turns slow into unacceptable: a deadline measured in lives.
-World War II is the forcing function — the external pressure that made
-the leap from mechanical to electronic computing not just possible but
-urgent.</p>
-<p>Two wartime problems demanded calculation at impossible volume and
-speed. The first was <strong>ballistics</strong>: every gun needed
-firing tables, and each table was a mountain of arithmetic that hand
-computers and desk calculators could not produce fast enough. The second
-was <strong>cryptanalysis</strong> — the breaking of enemy ciphers. An
+<p>A clever machine can stay a curiosity for decades. Add a deadline
+measured in lives, and curiosity turns to necessity overnight. By the
+early 1940s the slow arithmetic of the mechanical era collided with a
+war that could not wait for it, and World War II became the forcing
+function — the outside pressure that made the leap from mechanical to
+electronic computing not merely possible but urgent.</p>
+<p>Two wartime problems demanded calculation at volumes no roomful of
+human computers could supply. The first was <strong>ballistics</strong>:
+every new gun and shell needed firing tables, and a single table was a
+mountain of arithmetic. A trained person at a desk calculator could
+spend the better part of a month on one — and the artillery was being
+designed faster than the tables could be finished. The second was
+<strong>cryptanalysis</strong>, the breaking of enemy ciphers. An
 <strong>enciphered message</strong> is one scrambled by a secret machine
-setting; to read it, codebreakers had to test enormous numbers of
-possible settings, far more than any team could try by hand in time for
-the information to matter.</p>
-<p>The codebreaking work at <strong>Bletchley Park</strong>, Britain’s
-wartime cipher center, produced a landmark machine.
-<strong>Colossus</strong> was a programmable electronic computer built
-specifically to help break encrypted German teleprinter traffic. What it
-does is race through candidate cipher settings using electronics rather
-than gears, accelerating a task that was otherwise hopeless. It was
-special-purpose — built for codebreaking, not general use — but it
-proved that large-scale electronic computation actually worked.</p>
-<p>Why did electronics win? The answer is a single component: the
-<strong>vacuum tube</strong>, a glass tube that switches and amplifies
-an electric current with no moving parts. Compare it to the
-<strong>relay</strong>, the electromechanical switch used in earlier
-machines, which physically flips a metal arm. A relay must move a piece
-of metal each time it switches; a vacuum tube switches a flow of
-electrons. The result is switching that is <em>orders of magnitude
-faster</em> — thousands of times — because nothing mechanical has to
-move. That speed difference is the whole reason electronic computing
-displaced mechanical computing.</p>
-<p>There is a historical catch worth naming. Much of this wartime work
-was <strong>classified</strong> — kept secret — and stayed secret for
-decades. Colossus and the Bletchley Park effort were largely unknown to
-the public until the 1970s and later, which means the standard story of
-“who invented the computer” was written before some of the key evidence
-was even allowed to be discussed. Secrecy did not just hide the
-machines; it distorted the historical record.</p>
+setting; to read it, codebreakers had to sift through staggering numbers
+of possible settings, far more than any team could test by hand before
+the intelligence inside went stale.</p>
+<p>In the huts of <strong>Bletchley Park</strong>, Britain’s wartime
+cipher center north of London, that second problem produced a landmark.
+<strong>Colossus</strong> — built largely to the design of engineer
+Tommy Flowers — was a programmable electronic computer aimed at the
+high-level German teleprinter ciphers. It raced through candidate cipher
+settings with electronics instead of gears, turning a hopeless
+hand-search into a job that finished in hours. Colossus was
+special-purpose, built for codebreaking and nothing else, but it settled
+a question that mattered to everything after it: large-scale electronic
+computation actually worked.</p>
+<p>Why did electronics win the race against gears? It came down to a
+single component. The <strong>vacuum tube</strong> is a glass tube that
+switches and amplifies an electric current with no moving parts at all.
+Set it beside the <strong>relay</strong>, the electromechanical switch
+in the older machines, which worked by physically snapping a small metal
+arm shut and open. The relay has to fling a piece of metal every time it
+flips; the tube simply steers a flow of electrons. Nothing material has
+to travel, and so the tube switches <em>thousands of times faster</em>.
+That single gap — electrons moving versus metal moving — is the whole
+reason electronic computing buried the mechanical kind.</p>
+<p>One historical catch deserves a name. Much of this work was
+<strong>classified</strong>, and stayed secret for decades after the
+guns fell silent. Colossus and the Bletchley Park effort were hidden
+from the public into the 1970s and beyond, which means the familiar
+story of “who invented the computer” was first written without some of
+its most important chapters on the table. Secrecy did not only conceal
+the machines; it bent the historical record around them.</p>
 <h2 id="topic-3-the-first-electronic-computers">Topic 3 — The First
 Electronic Computers</h2>
-<p>War proved electronics could compute. The immediate result was a new
-kind of machine: enormous, electronic, and astonishingly fast for its
-day — but also maddeningly hard to use and to keep alive. This topic is
-about that double-edged leap.</p>
-<p>The emblem of the era is <strong>ENIAC</strong> (Electronic Numerical
-Integrator and Computer), a room-sized, general-purpose electronic
-computer completed in the United States in the mid-1940s, originally to
-compute firing tables. The numbers tell the story: it used roughly
-<strong>18,000 vacuum tubes</strong>, weighed about 30 tons, and filled
-a large room. What it does is arithmetic at electronic speed —
-calculations that took a person with a desk calculator hours or days,
-ENIAC could do in seconds. That is the leap in raw
-<strong>speed</strong>.</p>
-<p>But a fast machine you cannot easily instruct is only half a machine.
-ENIAC and its peers were <strong>programmed by rewiring</strong>: to set
-up a new problem, technicians physically re-plugged cables and reset
-banks of switches, a process that could take <strong>days</strong>. So
-the machine that computed in seconds could take days to
-<em>prepare</em>. This is the painful gap of the era — blazing hardware
-shackled to glacial setup.</p>
-<p>The machines also fought their own physics. Each vacuum tube was a
-small glowing filament that ran hot and could burn out, and with
-thousands of tubes, <strong>failures were frequent</strong>. The
-machines generated enormous heat, demanded heavy cooling, and required
-constant maintenance to find and replace dead tubes. Much of the real
-engineering of early electronic computing was simply the work of keeping
-the machine running long enough to finish a job. This is the
-<strong>reliability</strong> problem.</p>
-<p>Set this directly against the mechanical era to see what changed and
-what did not. Versus a Babbage engine or a tabulating machine, ENIAC-era
-computers brought a staggering gain in <strong>speed</strong> and
-<strong>scale</strong> and the first real hint of
-<strong>generality</strong> — ENIAC could be set up for many different
-numerical problems, not just one. But they inherited a fatal
-awkwardness: like a mechanical machine reconfigured by hand, they still
-had to be physically rewired for each new task. The hardware had become
-electronic; the <em>programming</em> had not yet caught up.</p>
+<p>Step into a hall at the University of Pennsylvania in 1945 and the
+machine almost overwhelms the room: forty steel cabinets in a U around
+the walls, a low electric roar, and a heat like an oven from thousands
+of glass tubes burning at once. This was <strong>ENIAC</strong>
+(Electronic Numerical Integrator and Computer), the general-purpose
+electronic computer the U.S. Army had commissioned to grind out firing
+tables. The numbers still impress: roughly <strong>18,000 vacuum
+tubes</strong>, about 30 tons of hardware, and a footprint that
+swallowed a large room. And it was astonishingly fast and maddeningly
+hard to use in equal measure. This topic is about that double edge.</p>
+<p>Take the triumph first. ENIAC did arithmetic at electronic speed. A
+calculation that cost a human computer with a desk machine hours or
+days, it dispatched in seconds — a firing-table trajectory that had
+taken twenty hours by hand came out in under a minute. That is the raw
+leap in <strong>speed</strong>, and it was real.</p>
+<p>But a machine you cannot easily instruct is only half a machine, and
+here ENIAC stumbled. It was <strong>programmed by rewiring</strong>. To
+set it to a new problem, technicians — many of them the women
+mathematicians who had been the human “computers” — walked the cabinets
+re-plugging cables and resetting banks of switches by hand, a job that
+could swallow <strong>days</strong>. The machine that calculated in
+seconds could take days to <em>prepare</em>. That is the cruel gap of
+the era: blazing hardware shackled to a glacial setup.</p>
+<p>The machines also waged a constant war with their own physics. Every
+vacuum tube was a small glowing filament, hot and mortal, and with
+thousands burning at once <strong>failures were frequent</strong> — a
+single dead tube could halt the whole machine. The cabinets threw off
+enormous heat, demanded heavy cooling, and kept a crew busy hunting down
+and swapping the casualties. Much of the genuine engineering of early
+electronic computing was simply the labor of keeping the thing alive
+long enough to finish a run. That is the <strong>reliability</strong>
+problem.</p>
+<p>Hold ENIAC up against the mechanical era and the ledger comes clear.
+Set beside a Babbage engine or a Hollerith tabulator, the ENIAC-class
+machines delivered a staggering gain in <strong>speed</strong> and
+<strong>scale</strong> and the first real taste of
+<strong>generality</strong> — ENIAC could be configured for many
+different numerical problems, not just one. Yet they carried over one
+stubborn flaw from their ancestors: like a mechanical contraption
+rebuilt by hand, they had to be physically rewired for every new task.
+The hardware had gone electronic. The <em>programming</em> had not.</p>
 <h2 id="topic-4-the-stored-program-idea">Topic 4 — The Stored-Program
 Idea</h2>
-<p>You are now holding the central tension of early computing: a machine
-that calculates in seconds but must be rewired over days to change its
-task. A computer you have to physically re-cable for every job is not
-really a <em>general-purpose</em> machine — it is a fast machine that
-happens to be reconfigurable with great effort. The breakthrough of this
-topic dissolves that tension with a single, almost philosophical idea.
-This is the lesson’s payoff.</p>
-<p>The idea is the <strong>stored-program concept</strong> — the
-principle that a computer’s instructions can be held in its memory
-<em>alongside the data</em>, in the same form. What this does is
-profound: if the program is stored as numbers in memory, then changing
-the program is no harder than changing data. You no longer rewire the
-machine to give it a new task; you simply load a different set of
-instructions into memory. Setup that once took days collapses into the
-time it takes to read in a new program.</p>
-<p>The architecture that embodies this idea is the <strong>von Neumann
-architecture</strong> — a design in which a single memory holds both
-instructions and data, and a central processing unit fetches and
-executes those instructions one after another. (It is named for the
-mathematician John von Neumann, who described it in an influential 1945
-report.) What it does is give later machines a common template: memory,
-a processor that reads instructions from that memory, and the ability to
-treat instructions as just another kind of stored number. The
-overwhelming majority of computers built afterward inherited this basic
-plan.</p>
-<p>Make the core insight unmistakable with a concrete contrast. On a
-rewire-programmed machine, switching from a ballistics calculation to a
-codebreaking task means a technician spends days re-plugging cables. On
+<p>Picture the technicians again, threading cables across ENIAC’s
+cabinets for the better part of a week to prepare a single new problem —
+while the machine that could solve it in seconds stands idle, waiting on
+them. That image is the central tension of early computing: a calculator
+quick as lightning to <em>run</em> and glacially slow to
+<em>re-aim</em>. A computer you must re-cable for every job is not truly
+general-purpose; it is a fast machine that happens to be reconfigurable,
+at great cost. The breakthrough of this topic dissolves that tension
+with one almost philosophical idea — and it is the lesson’s payoff.</p>
+<p>The idea is the <strong>stored-program concept</strong>: the
+principle that a computer’s instructions can live in its memory
+<em>alongside the data</em>, in the very same form. Follow the
+consequence and it turns profound. If the program is just numbers
+sitting in memory, then changing the program is no harder than changing
+data. You stop rewiring the machine to give it a new task and instead
+load a different set of instructions, the way you might load a different
+page of figures. A setup that once devoured days shrinks to the time it
+takes to read a program in.</p>
+<p>The design that put this idea to work is the <strong>von Neumann
+architecture</strong> — a single memory holding both instructions and
+data, with a central processing unit that fetches and executes those
+instructions one after another. It takes its name from the mathematician
+John von Neumann, who set it out in an influential 1945 report drafted
+while the EDVAC machine was being planned. The architecture handed every
+later builder a common template: a memory, a processor that reads its
+instructions out of that memory, and the willingness to treat an
+instruction as just one more stored number. The overwhelming majority of
+computers built since have inherited this plan.</p>
+<p>Make the insight unmistakable with a single contrast. On a
+rewire-programmed machine, switching from a ballistics table to a
+codebreaking search means a technician loses days at the patch panel. On
 a stored-program machine, the same switch means loading a different
-program from memory — minutes, not days — because the instructions are
-<em>just data the machine can read</em>. The same physical hardware does
-both jobs without a screwdriver ever touching it.</p>
+program out of memory — minutes, not days — because the instructions are
+<em>just data the machine can read</em>. One unchanged box of hardware
+does both jobs, and no screwdriver ever touches it.</p>
 <p>This is why the stored-program concept is the conceptual hinge of the
-entire computing revolution. The mechanical era hunted for speed; the
-electronic era found it; but <strong>generality</strong> — one machine
-that can do any computational job by loading different instructions —
-arrives only when instructions become data in memory. Every
-general-purpose computer that follows rests on this single idea.</p>
+whole computing revolution. The mechanical era hunted for speed; the
+wartime electronic machines found it; but <strong>generality</strong> —
+one machine that can do any computational job by loading different
+instructions — arrives only when instructions become data in memory.
+Every general-purpose computer that follows stands on this single
+idea.</p>
 <h2 id="activity-from-rewiring-to-reprogramming">Activity — “From
 Rewiring to Reprogramming”</h2>
 <ul>

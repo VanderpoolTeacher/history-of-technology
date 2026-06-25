@@ -17,17 +17,17 @@ Internet</h1>
 <p><strong>Module:</strong> 6 — The Internet Age ·
 <strong>Hours:</strong> 3 (180 min)</p>
 <h2 id="introduction">Introduction</h2>
-<p>Picture a room full of powerful computers, each one humming away on
-its own desk, and none of them able to say a single word to any of the
-others. Each machine is an island. To send a report from one to the
-next, you would copy it onto a disk and physically walk it across the
-room.</p>
-<p>That isolation was once the normal state of computing, and it set a
-hard ceiling on what machines could do together. Without a way to
+<p>Picture a room full of powerful computers in 1965, each humming away
+on its own desk, and not one of them able to say a single word to any of
+the others. Each machine is an island. To carry a report from one to the
+next, you copy it onto a reel of tape and walk it across the room by
+hand.</p>
+<p>That isolation was once the ordinary state of computing, and it set a
+hard ceiling on what machines could do together. With no way to
 interconnect independently built and independently run networks,
 knowledge stayed trapped wherever it was created, and collaboration
-stopped at the edge of the building. The problem was not raw computing
-power — it was connection.</p>
+stopped at the edge of the building. The bottleneck was never raw
+computing power — it was connection.</p>
 <p>In this lesson you will trace the engineering ideas that turned
 isolated machines into a single, planet-spanning network of networks:
 packet switching, the early research network that proved it, and the
@@ -50,149 +50,158 @@ the spread of information.</li>
 </ol>
 <h2 id="topic-1-packets-not-circuits">Topic 1 — Packets, Not
 Circuits</h2>
-<p>Start with a question that has a surprising answer: when you send a
-message across a shared network, how should that network move it? The
-obvious approach — open a private line from sender to receiver — turns
-out to be exactly the wrong one, and seeing why is the foundation of
-everything that follows.</p>
-<p>The older approach is <strong>circuit switching</strong> — a method
-of communication in which the network reserves a dedicated, end-to-end
-path for the entire duration of a conversation, exactly the way a
-traditional telephone call works. What it does is guarantee a private
-channel: once the circuit is set up, the two ends have it all to
-themselves. The trouble is what that costs. The reserved line sits idle
-whenever no one is talking, wasting capacity, and if any single link
-along that fixed path is cut, the whole conversation drops instantly —
-there is no path left.</p>
-<p>The alternative is <strong>packet switching</strong> — a method that
-breaks a message into small, individually addressed pieces called
-<strong>packets</strong>, each carrying the destination address and its
-position in the sequence, routes each packet independently across
-whatever links are free, and reassembles them in order at the
-destination. What packet switching does is make the network robust and
-efficient at the same time. It is robust because packets route
-<em>around</em> damage or congestion: if one link goes down, later
-packets simply take another path. It is efficient because many separate
-conversations share the same links instead of each demanding a reserved
-line of its own.</p>
-<p>Here is the idea made concrete. Imagine you need to send a long
-letter and, instead of mailing it as one bundle, you write it across
-fifty numbered postcards and drop them in the mail. Each postcard finds
-its own route through the postal system; some go one way, some another;
-and the recipient sorts them back into order by their numbers. If one
-road is closed, the postcards on later trips simply go around it —
-nothing is lost, because no single road had to stay open the whole time.
-Packet switching does this for data.</p>
+<p>In the early 1960s, an engineer named Paul Baran sat at the RAND
+Corporation working a grim problem: how do you build a communications
+network that keeps working even after pieces of it have been destroyed?
+The telephone system of his day could not. And in answering that
+question, Baran — and, independently, a British physicist named Donald
+Davies, who coined the word that stuck — landed on the idea underneath
+everything you will study in this lesson. Seeing why the obvious
+approach fails is the foundation of everything that follows.</p>
+<p>The obvious approach is <strong>circuit switching</strong> — a method
+in which the network reserves a dedicated, end-to-end path for the
+entire duration of a conversation, exactly the way a traditional
+telephone call works. Pick up the receiver, dial, and the system
+stitches together a private channel that is yours alone until you hang
+up. That privacy is precisely the weakness. The reserved line sits idle
+every moment no one is speaking, squandering capacity; worse, snip any
+single link along that fixed path and the whole conversation drops on
+the spot, because no other path was ever held in reserve. Baran’s
+wartime worry was exactly this fragility.</p>
+<p>His alternative was <strong>packet switching</strong> — break a
+message into small, individually addressed pieces called
+<strong>packets</strong>, stamp each one with the destination address
+and its place in the sequence, fling each across whatever links happen
+to be free, and reassemble them in order at the far end. Two virtues
+fall out at once. The network becomes robust, because packets route
+<em>around</em> damage or congestion: knock out a link, and later
+packets simply choose another. And it becomes efficient, because many
+separate conversations share the same wires instead of each hoarding a
+private line.</p>
+<p>Picture it as mail. You need to send a long letter, but instead of
+one fat envelope you copy it across fifty numbered postcards and drop
+them in a box. Each postcard finds its own way through the postal system
+— some north, some south — and the recipient sorts them back into order
+by their numbers. Close one road and the later postcards detour around
+it; nothing is lost, because no single road ever had to stay open the
+whole time. Packet switching does exactly this for data.</p>
 <h2 id="topic-2-arpanet-and-tcpip">Topic 2 — ARPANET and TCP/IP</h2>
-<p>Packet switching is a good idea on paper. The next question is
-whether it works at scale, and then a harder one: once several separate
-packet networks exist, how do you get them to talk to <em>each
-other</em>? This topic follows that arc from one network to a network of
-networks.</p>
-<p>The first large-scale proof was <strong>ARPANET</strong> — the first
-major packet-switched network, built to link research laboratories and
-university sites so they could share computing resources and results.
-What ARPANET did was demonstrate, in the real world, that packet
-switching could carry genuine traffic reliably between distant sites.
-But its success created a new problem. Soon other packet-switched
-networks existed too, each built by a different organization with its
-own rules — and they could not understand one another. You had many
-islands again, just larger ones.</p>
-<p>The solution was a shared language every network could agree to
-speak: <strong>TCP/IP</strong>, short for <strong>Transmission Control
-Protocol / Internet Protocol</strong> — a pair of cooperating protocols
-that together let any network join a larger whole. The <strong>Internet
-Protocol (IP)</strong> gives every machine an address and handles
-routing each packet toward that address, hop by hop. The
-<strong>Transmission Control Protocol (TCP)</strong> sits on top of IP
-and handles reliability: it numbers the packets, checks that they all
-arrive, asks for any that go missing, and reassembles them in the
-correct order. Because TCP/IP did not care what kind of network sat
-underneath it, any network that adopted it could plug in. That is what
-creates an <strong>internetwork</strong> — a network <em>of</em>
-networks, in which many independently run networks interconnect into one
-larger system.</p>
-<p>A useful marker for when the modern internet’s architecture was set
-is the 1983 cutover, when ARPANET formally switched over to TCP/IP as
-its required protocol. After that point, the design principle was fixed:
-speak TCP/IP, and you can join. As a concrete illustration, picture two
-separate campus networks, each working fine internally but mutually
-deaf. Place a single device — a <strong>router</strong>, a machine that
-forwards packets between networks using their IP addresses — between
-them, have both networks speak TCP/IP, and the two instantly become one
-reachable system. Repeat that move thousands of times and you have the
-internet.</p>
+<p>Late in 1969, in a lab at the University of California, Los Angeles,
+a graduate student tried to log in to a computer four hundred miles away
+at the Stanford Research Institute. He began typing the word
+<em>LOGIN</em>. The system crashed after two letters. The first message
+ever sent over the new research network was, accidentally, “lo” — and
+yet that stuttering link was the moment packet switching left the page
+and started moving real traffic between distant machines. The harder
+question came next: once several separate packet networks existed, how
+could you get them to talk to <em>each other</em>?</p>
+<p>That first network was <strong>ARPANET</strong> — the first major
+packet-switched network, funded by the U.S. Defense Department’s
+Advanced Research Projects Agency to link laboratories and university
+sites so they could share scarce computing resources and results. It
+proved, in the field rather than on a whiteboard, that packet switching
+could carry genuine traffic reliably across the country. But success
+bred a fresh problem. Soon other packet networks existed too, each built
+by a different organization to its own rules — and they could not
+understand one another. The islands were back, just larger.</p>
+<p>The fix was a shared language every network could agree to speak:
+<strong>TCP/IP</strong>, short for <strong>Transmission Control Protocol
+/ Internet Protocol</strong>, the pair of cooperating protocols designed
+chiefly by Vint Cerf and Robert Kahn. The <strong>Internet Protocol
+(IP)</strong> gives every machine an address and shoves each packet
+toward that address, one hop at a time. The <strong>Transmission Control
+Protocol (TCP)</strong> rides on top of IP and minds reliability: it
+numbers the packets, checks that they all arrive, demands re-sends of
+any that vanish, and reassembles the rest in order. Crucially, TCP/IP
+does not care what kind of network sits beneath it — so any network that
+adopted it could simply plug in. That is what creates an
+<strong>internetwork</strong>: a network <em>of</em> networks, in which
+many independently run networks interconnect into one larger system.</p>
+<p>The architecture locked into place on a single date. On January 1,
+1983, ARPANET formally cut over to TCP/IP as its required protocol, and
+from that day the design principle was fixed — speak TCP/IP, and you can
+join. Picture two campus networks, each humming along internally yet
+mutually deaf. Drop a single device between them — a
+<strong>router</strong>, a machine that forwards packets between
+networks by reading their IP addresses — have both speak TCP/IP, and the
+two snap into one reachable system. Repeat that move a few thousand
+times and you have the internet.</p>
 <h2 id="topic-3-why-it-could-grow-without-a-boss">Topic 3 — Why It Could
 Grow Without a Boss</h2>
-<p>Here is something genuinely strange about the internet: it grew from
-a handful of sites to a global system, yet no company, government, or
-committee ever ran it the way an airline runs its schedule. How can a
-system that huge have no one in charge of it? The answer is in how it
-was designed, and it explains why the growth was explosive rather than
-gradual.</p>
-<p>The first design choice is <strong>layered design</strong> — an
-architecture in which functions are stacked in layers, so that
-applications sit on top of TCP/IP rather than being built into it. What
-layering does is decouple <em>uses</em> from <em>plumbing</em>. The core
-network only has to move packets; anything you want to <em>do</em> with
-those packets — send mail, transfer a file, browse pages — is a separate
-layer built on top. This means a new use can appear without anyone
-touching or asking permission to change the underlying network. The
-plumbing never has to know what flows through it.</p>
+<p>There is no head office of the internet. No chief executive signs off
+on new connections, no central switchboard routes the world’s traffic,
+no committee approves your right to plug in. A system spanning the
+planet and carrying the affairs of billions has, in the ordinary sense,
+nobody in charge — and that is not an oversight. It is a design, and the
+design is exactly why the growth was explosive rather than gradual.</p>
+<p>The first choice is <strong>layered design</strong> — an architecture
+in which functions are stacked in layers, so that applications sit
+<em>on top of</em> TCP/IP rather than being baked into it. Layering
+pries apart <em>uses</em> from <em>plumbing</em>. The core network has
+one humble job, moving packets; everything you might actually
+<em>do</em> with those packets — send mail, transfer a file, browse
+pages — lives in a separate layer above. A wholly new use can therefore
+appear without anyone touching the network beneath it or asking leave to
+do so. The plumbing never needs to know what flows through it.</p>
 <p>The second choice is <strong>open standards</strong> — publicly
-available specifications that anyone is free to implement, distributed
-as documents called <strong>RFCs</strong> (Requests for Comments), the
-open technical notes in which internet protocols are proposed and
-defined. What open standards do is prevent ownership: because the rules
-are public and free to implement, no single vendor or government
-controls the network or can lock others out. The third choice is
-<strong>decentralization</strong> — the absence of any central
-switchboard or authority that must grant permission to connect. Because
-there is no central control point, a new network can join simply by
-speaking the agreed protocols and plugging in; it does not file an
-application with anyone.</p>
-<p>Put those three together and the result is exponential, bottom-up
-growth. Each new network adds value for everyone already connected, and
-joining requires no permission — so growth feeds itself. As a concrete
-illustration, contrast this with a system that <em>does</em> have a
-boss: to add a new branch to a private corporate network, you must
-request access, get provisioned, and be approved. On the internet, by
-design, there was no one to ask. A university could connect its network
-on a Tuesday and reach the rest of the world by Wednesday.</p>
+available specifications anyone is free to implement, circulated as
+documents called <strong>RFCs</strong> (Requests for Comments). The very
+name, chosen by Steve Crocker for the first such note in 1969, signals
+the spirit: these are open invitations to comment, not commandments from
+above. Because the rules are public and free to build on, no single
+vendor or government owns the network or can bar anyone from it. The
+third choice is <strong>decentralization</strong> — the plain absence of
+any central authority whose permission you must seek. A new network
+joins by speaking the agreed protocols and plugging in; it files an
+application with no one.</p>
+<p>Stack those three together and growth feeds itself. Every new network
+makes the whole more valuable to everyone already on it, and the price
+of joining is merely agreement to the protocols — so the thing
+snowballs. Set that beside a system that <em>does</em> have a boss: to
+add a branch to a private corporate network, you request access, wait to
+be provisioned, and hope to be approved. On the internet, by design,
+there was no one to ask. A university could wire up its network on a
+Tuesday and reach the far side of the world by Wednesday.</p>
 <h2 id="topic-4-early-life-online">Topic 4 — Early Life Online</h2>
-<p>Infrastructure only matters because of what people do with it. Before
-the network reached the general public, the first communities of
-connected users were already discovering that reaching anyone, anywhere,
-instantly, changes how people work and relate. This topic looks at that
-first wave of human experience.</p>
-<p>The first <strong>killer application</strong> — a use so compelling
-that it alone justifies adopting the technology — was
-<strong>email</strong>, short for electronic mail: asynchronous, cheap,
-many-to-many text messages sent between connected users. What email did
-was collapse the cost and delay of distance. You could write to a
-colleague across the country, they could read and reply whenever they
-chose, and the message cost effectively nothing to send. Communication
-no longer required both people to be present at the same moment, as a
-phone call did, nor to wait days, as a letter did.</p>
-<p>Around email grew the first online communities. <strong>Newsgroups
-and bulletin boards</strong> were shared, topic-organized message spaces
-where anyone connected could post a question or answer and everyone
-could read the thread, and <strong>mailing lists</strong> delivered
-group discussions to every subscriber’s inbox. What these did was create
-shared knowledge spaces that were not tied to any one place: a question
-posted by someone in one city could be answered by a stranger in
-another, and the answer stayed visible for everyone who came later. The
-early social effects were immediate. Distance collapsed; research
-collaboration sped up because findings and questions circulated in hours
-rather than weeks; and brand-new norms — and frictions — appeared around
-text-only communication, where tone is easy to misread and a careless
-message can spark a public argument.</p>
-<p>As a concrete illustration, imagine a researcher stuck on a technical
-problem posts it to a newsgroup at midnight. By morning, three people in
-three different countries — none of whom she has ever met — have replied
-with partial answers, and a fourth has linked the whole thread to a
-related discussion. That kind of fast, distributed, stranger-to-stranger
-help simply had no equivalent before the network existed.</p>
+<p>The engineers who built ARPANET expected its great use to be sharing
+expensive computers across distance. What they had not quite expected
+was that the people using it would mostly want to talk to one another.
+By the early 1970s, a programmer named Ray Tomlinson had wired up a way
+to send messages between machines and reached for a character to
+separate the user from the host — the @ sign, until then nearly useless
+on a keyboard. Within a couple of years, this side project was
+generating more traffic than anything the network was officially built
+to do. Infrastructure, it turns out, only matters because of what people
+insist on doing with it.</p>
+<p>That runaway side project was the first <strong>killer
+application</strong> — a use so compelling it alone justifies adopting
+the whole technology — and it was <strong>email</strong>, short for
+electronic mail: asynchronous, cheap, many-to-many text messages between
+connected users. Email crushed the cost and the delay of distance at one
+stroke. Write to a colleague across the country, and they read and
+answer whenever they please, for effectively nothing. Communication no
+longer demanded that both people be present in the same instant, as a
+phone call did, nor that one wait days, as a letter did.</p>
+<p>Around email clustered the first online communities.
+<strong>Newsgroups and bulletin boards</strong> were shared,
+topic-organized message spaces where anyone connected could post a
+question or an answer and everyone could read the thread;
+<strong>mailing lists</strong> pushed group discussions straight into
+every subscriber’s inbox. These built shared knowledge that belonged to
+no single place. A question posted by someone in one city might be
+answered by a stranger in another, and the answer lingered, visible to
+everyone who arrived later. The social effects landed fast. Distance
+collapsed. Research sped up as findings circulated in hours rather than
+weeks. And entirely new manners — and frictions — sprang up around
+text-only talk, where tone is easy to misread and one careless line can
+ignite a public quarrel; the early users even had a word for those
+eruptions, <em>flame wars</em>.</p>
+<p>Make it concrete. A researcher stuck on a stubborn problem posts it
+to a newsgroup at midnight. By morning three people in three countries —
+none of whom she has ever met — have answered in part, and a fourth has
+linked her thread to a related discussion across the ocean. That kind of
+fast, distributed, stranger-to-stranger help had no equivalent before
+the network existed.</p>
 <h2 id="activity-route-the-packets">Activity — “Route the Packets”</h2>
 <ul>
 <li><strong>Type:</strong> Group exercise (hands-on application and
