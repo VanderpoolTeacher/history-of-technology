@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 13: Automation and Artificial Intelligence</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a href="index.html">The History of Technology</a>
+  <a class="home" href="index.html">All lessons ↗</a>
+</div></header>
+<main class="wrap">
+<h1 id="lesson-13-automation-and-artificial-intelligence">Lesson 13:
+Automation and Artificial Intelligence</h1>
+<p><strong>Module:</strong> 7 — AI &amp; the Present ·
+<strong>Hours:</strong> 3 (180 min)</p>
+<h2 id="introduction">Introduction</h2>
+<p>People have promised “thinking machines” for about seventy years, and
+for most of that time the machines kept letting them down. Then, quite
+suddenly, systems that write, draw, and converse seemed to arrive all at
+once. Why did artificial intelligence spend decades disappointing, and
+why does it suddenly seem to work?</p>
+<p>If you treat today’s moment as completely unprecedented, you lose the
+one thing that helps you judge it: a track record. Artificial
+intelligence has boomed and busted before, and each boom felt, to the
+people living through it, exactly as revolutionary as this one feels
+now. Without that history, you cannot tell a durable advance from a wave
+of excitement that will recede.</p>
+<p>In this lesson you will pin down what <em>automation</em> and
+<em>artificial intelligence</em> actually mean, trace the field’s real
+history of optimism and collapse, see what changed when systems began
+learning from data instead of following hand-written rules, and learn to
+weigh present-day claims against that history. The goal is to situate
+and explain these developments, not to teach you to build them.</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this lesson, learners will be able to:</p>
+<ol type="1">
+<li>Define <em>automation</em> and <em>artificial intelligence</em> and
+distinguish them from each other and from ordinary mechanization studied
+in earlier modules.</li>
+<li>Describe the historical arc of AI — early symbolic AI, expert
+systems, and the “AI winters” — and explain why progress stalled in
+those periods.</li>
+<li>Explain how the shift to machine learning, deep learning, and large
+models — enabled by abundant data, cheap computing power, and pervasive
+connectivity — moved AI from rule-writing to learning from data.</li>
+<li>Situate present-day AI and automation developments and the debates
+surrounding them in this historical arc, distinguishing genuine
+capability shifts from recurring hype. <em>(C8)</em></li>
+</ol>
+<h2 id="topic-1-what-automation-and-ai-actually-mean">Topic 1 — What
+“Automation” and “AI” Actually Mean</h2>
+<p>Before you can judge any claim about machines that “think,” you need
+to separate two ideas that get tangled together constantly: a machine
+doing a job by itself, and a machine doing something we associate with a
+human mind. They are not the same thing, and confusing them is the root
+of most overheated headlines.</p>
+<p><strong>Automation</strong> is machines performing tasks with little
+or no human intervention. What it does is take a process a person used
+to run by hand and let a mechanism run it instead. This is a direct
+continuation of the mechanization that defined the Industrial
+Revolutions: a mechanical loom that weaves cloth without a weaver
+guiding every thread is automation, and so is a thermostat that switches
+a furnace on and off without anyone watching the temperature.</p>
+<p><strong>Artificial intelligence (AI)</strong> is a broader and
+slipperier idea: systems that perform tasks we associate with human
+cognition — perception, language, and decision-making. What AI is meant
+to do is not merely repeat a fixed motion but <em>generalize or
+adapt</em> to inputs it was not explicitly told about in advance. Here
+is the contrast made concrete. A mechanical loom from the early 1800s
+repeats one programmed pattern flawlessly and forever; it cannot react
+to anything new. A modern recommendation system that suggests what you
+might watch next is doing something different — it adjusts its output to
+each person and updates as new data arrives. The loom is fixed
+mechanization; the recommender is designed to adapt.</p>
+<p>That distinction leads to the single most important clarification in
+this topic. <strong>Narrow AI</strong> is a system that performs one
+specific kind of task — recognizing faces, transcribing speech,
+recommending products — even if it does so impressively. <strong>General
+AI</strong>, sometimes called artificial general intelligence, would be
+a system with broad, flexible, human-like competence across many
+unrelated tasks. What you need to know is that essentially every AI
+system in real use today is narrow, no matter how broad its abilities
+<em>seem</em>. A system that can write an essay, answer trivia, and
+draft an email can look general, but it is a narrow system trained on
+language patterns; it has no understanding, goals, or awareness in the
+human sense. General AI remains hypothetical.</p>
+<h2
+id="topic-2-the-long-history-symbolic-ai-expert-systems-and-the-ai-winters">Topic
+2 — The Long History: Symbolic AI, Expert Systems, and the AI
+Winters</h2>
+<p>It is tempting to treat the current excitement as the very first time
+machines became smart. The honest history says the opposite: AI has
+surged with optimism and then collapsed in disappointment more than
+once, and seeing that pattern is what lets you judge the present soberly
+rather than breathlessly.</p>
+<p>The story opens in the 1950s with enormous ambition. Researchers
+gathered believing that human reasoning could be reduced to logical
+rules and programmed into a computer within a generation. Their approach
+is now called <strong>symbolic AI</strong> (also rule-based AI): the
+attempt to capture intelligence by writing down explicit rules and
+symbols that represent facts and logical relationships. What symbolic AI
+does is reason by manipulating those rules — “if A and B, then C” — the
+way a logician works through a proof. For simple, closed problems it
+worked, and the early successes fueled confident predictions that
+human-level machine reasoning was just around the corner.</p>
+<p>That confidence produced the field’s first big commercial wave in the
+1970s and 1980s: <strong>expert systems</strong>. An expert system is a
+program that captures the knowledge of a human specialist as a large set
+of hand-coded “if-then” rules and uses them to give advice in a narrow
+domain. What it does is let a computer mimic, say, a medical
+diagnostician or an equipment-fault troubleshooter by walking through
+hundreds of expert-supplied rules. Consider a concrete case: a system
+built to diagnose infections by asking a doctor a series of questions
+and matching the answers against coded rules about symptoms and
+bacteria. Within their narrow lane these systems could be genuinely
+useful, and companies invested heavily.</p>
+<p>Then came the busts. The field has lived through periods now called
+<strong>AI winters</strong> — stretches when funding, public confidence,
+and commercial interest collapsed because systems failed to live up to
+their promises. The winters followed booms directly: grand claims were
+made, the systems proved far more limited than advertised, money dried
+up, and the field went quiet for years. The deep reason is worth naming.
+Hand-written rules hit a ceiling of <strong>brittleness</strong> — they
+work only inside the exact situations their authors anticipated and fail
+badly the moment reality steps outside those bounds. An expert system
+with ten thousand rules still has no rule for the case its builders
+never imagined, and the real world is endlessly full of such cases.
+Encoding all of common sense by hand turned out to be effectively
+impossible: there is simply too much of it, and much of it is too tacit
+to write down.</p>
+<h2
+id="topic-3-from-rules-to-learning-machine-learning-deep-learning-and-large-models">Topic
+3 — From Rules to Learning: Machine Learning, Deep Learning, and Large
+Models</h2>
+<p>If writing rules by hand hit a wall, the obvious question is: what
+got AI off the floor after the winters? The answer is a change of
+strategy so basic it is easy to miss — stop telling the machine the
+rules, and let it find them itself.</p>
+<p>That strategy is <strong>machine learning (ML)</strong>: instead of a
+programmer writing explicit rules, the system is shown large numbers of
+examples and infers the patterns on its own. What ML does is flip the
+labor: rather than a human encoding “here is how to recognize a cat,”
+you show the system thousands of labeled cat and non-cat images and let
+it learn the distinguishing patterns statistically. The key contrast
+with the previous era is direct — symbolic AI required humans to
+anticipate every rule; machine learning lets the patterns come from the
+data, which sidesteps the brittleness problem because the system can
+pick up subtleties no human would think to write down.</p>
+<p>Within machine learning, the approach that drove the recent surge is
+<strong>deep learning</strong>, which uses <strong>neural
+networks</strong> — layered systems of simple interconnected units,
+loosely inspired by neurons, that pass signals forward and adjust their
+internal connections as they learn from examples. At a conceptual level,
+what a deep network does is build up patterns in stages: early layers
+might catch edges in an image, later layers combine those into shapes,
+and still later ones into objects. You do not need the mathematics; you
+need the idea that the network <em>discovers</em> this layered structure
+from data rather than being handed it. The leap of the last several
+years was scale — training very <strong>large models</strong> on
+internet-scale collections of text and images, producing systems that
+can generate fluent language and realistic pictures.</p>
+<p>So why did all this take off when it did, rather than in the 1980s?
+The core ideas of neural networks are decades old; what was missing was
+three enabling conditions that arrived together. The first is
+<strong>abundant data</strong> — the digitization and networking of
+daily life produced oceans of text, images, and behavior to learn from.
+The second is <strong>cheap, powerful compute</strong> — processors fast
+enough to train large models became affordable. The third is
+<strong>connectivity</strong> — pervasive networks made it possible to
+gather that data and deliver these systems at scale. None of the three
+alone was enough; their convergence was the unlock. As a concrete
+before-and-after: reliable machine translation between languages was,
+for decades, an embarrassing failure of rule-based methods, full of
+nonsense output. Once systems could instead learn translation from
+millions of human-translated sentence pairs, everyday usable translation
+went from infeasible to routine — and the same story repeated for speech
+recognition, image labeling, and text generation.</p>
+<h2 id="topic-4-situating-the-present-capability-vs.-hype">Topic 4 —
+Situating the Present: Capability vs. Hype</h2>
+<p>Now you have the yardstick the introduction promised: a field with a
+documented history of booms and busts. The task of this topic is to hold
+a present-day claim up against that yardstick and ask honestly whether
+you are looking at a durable capability shift or a hype peak.</p>
+<p>Today’s headline developments cluster in a few areas.
+<strong>Generative models</strong> produce new text, images, audio, or
+code rather than just classifying existing inputs. Automation is
+spreading from physical work into <strong>knowledge work</strong> —
+drafting documents, summarizing, writing software — not just factory
+floors. And <strong>AI-assisted decision-making</strong> is appearing in
+hiring, lending, medicine, and policing, where systems rank or flag
+cases for humans. What these systems can reliably do, and what they
+cannot, is genuinely contested: they can be fluent and useful, and they
+can also produce confident falsehoods, fail on cases outside their
+training, and reflect the biases of their data. A balanced reading holds
+both facts at once.</p>
+<p>This is exactly where the AI-winter history earns its keep. Each past
+boom featured sweeping predictions — human-level reasoning “within a
+decade,” expert systems replacing professionals wholesale — that outran
+what the technology delivered, and the gap triggered the bust. So when
+you meet a present claim, you can apply the same test: Is there a
+demonstrated, repeatable capability behind it, or mainly a projection of
+where things “must” be headed? A real capability shift shows up as tasks
+that genuinely move from infeasible to routine, as machine translation
+did. A hype peak shows up as confident forecasts about the near future
+with thin evidence underneath. Both can be present at once — a real
+advance wrapped in inflated promises — and your job is to separate the
+demonstrated core from the speculative wrapper.</p>
+<p>That balanced stance also sets up the questions worth taking
+seriously rather than dismissing. Present-day AI and automation raise
+open debates about labor (whose jobs change and who gains or loses),
+bias (whether systems reproduce past inequities), the environment (the
+energy and resource cost of large-scale computing), and power (who
+controls these systems). Naming these is not the same as resolving them;
+the point here is only to recognize them as live and consequential, the
+way every major technology in history arrived with both real capability
+and real costs.</p>
+<h2 id="activity-hype-or-turning-point">Activity — “Hype or Turning
+Point?”</h2>
+<ul>
+<li><strong>Type:</strong> Group exercise (structured small-group
+analysis and discussion).</li>
+<li><strong>Time:</strong> 30 minutes.</li>
+<li><strong>Description:</strong> You and your group will receive a
+short dossier of period claims about artificial intelligence — some
+drawn from a past boom and some from the present — with the dates
+redacted. Your job is to classify each claim as a <em>durable capability
+shift</em> or a <em>hype peak</em>, justify your call using the
+historical pattern of booms, winters, and the rules-to-learning pivot,
+and then estimate which era each claim came from.</li>
+</ul>
+<p><strong>Instructions:</strong></p>
+<ol type="1">
+<li>(3 min) In groups of three or four, read your dossier of six undated
+claims (provided below).</li>
+<li>(12 min) For each claim, decide whether it describes a capability
+that was (or has been) genuinely <em>demonstrated and durable</em>, or a
+<em>hype peak</em> — a sweeping prediction that outran the evidence.
+Write one sentence of justification for each, naming the criterion you
+used (e.g., “describes a task that actually moved from infeasible to
+routine” vs. “predicts the near future with thin evidence”).</li>
+<li>(8 min) For each claim, estimate the era it came from — a past AI
+boom (1950s–80s) or the present — and note the clue that places it.</li>
+<li>(7 min) Prepare a 60-second report on the two claims your group
+found hardest to classify and why.</li>
+</ol>
+<p><strong>Dossier of claims (for both instructor and
+groups):</strong></p>
+<ul>
+<li><strong>A.</strong> “Within a generation, machines will be able to
+do any work a person can do.”</li>
+<li><strong>B.</strong> “Our rule-based system can diagnose blood
+infections as well as a trained specialist, within its specialty.”</li>
+<li><strong>C.</strong> “Software can now translate everyday text
+between major languages well enough for routine practical use.”</li>
+<li><strong>D.</strong> “This system reasons like a human expert by
+following the rules we encoded from interviews.”</li>
+<li><strong>E.</strong> “A single model can write fluent essays, draft
+code, and answer questions across many topics.”</li>
+<li><strong>F.</strong> “Human-level general intelligence is just a few
+years away.”</li>
+</ul>
+<h2 id="wrap-up-and-reflection">Wrap-Up and Reflection</h2>
+<p>You came in with a single question — why did AI disappoint for
+decades and then suddenly seem to work — and you leave with a
+historian’s answer rather than a headline’s. Automation continues the
+old mechanization story of machines doing tasks by themselves;
+artificial intelligence is the newer, broader attempt to build systems
+that adapt and generalize, and even the most impressive of today’s
+systems are still narrow. The field’s real history is a cycle of booms
+and AI winters, driven by the brittleness of hand-written rules, and the
+recent surge came from a genuine strategy change — learning patterns
+from data — unlocked when abundant data, cheap compute, and connectivity
+finally arrived together.</p>
+<p>The most valuable thing to carry forward is the yardstick: AI’s own
+boom-and-bust record is the best tool you have for telling a durable
+capability shift from a hype peak. Real shifts move tasks from
+infeasible to routine; hype peaks forecast the near future with thin
+evidence — and the two often travel together.</p>
+<h3 id="key-takeaways">Key Takeaways</h3>
+<ul>
+<li>Automation (machines doing tasks by themselves) and AI (systems that
+adapt and generalize) overlap but are not the same; today’s AI is
+narrow, however broad it seems.</li>
+<li>AI has boomed and busted before; the AI winters followed grand
+claims that hand-written rules could not deliver because rule-based
+systems are brittle.</li>
+<li>The recent surge came from a strategy change — machine learning lets
+systems learn patterns from data instead of following coded rules.</li>
+<li>That change took off only when abundant data, cheap compute, and
+connectivity converged; none of the three alone was enough.</li>
+<li>AI’s own history is the yardstick for the present: durable
+capability shifts move tasks from infeasible to routine, while hype
+peaks predict the future with thin evidence.</li>
+</ul>
+<h3 id="reflection-questions">Reflection Questions</h3>
+<ol type="1">
+<li>Think of an AI or automated system you personally use. Is it doing
+something genuinely adaptive, or is it fixed automation dressed up as
+intelligence — and how can you tell?</li>
+<li>The lesson argues that AI’s past booms and busts are a yardstick for
+the present. Where else in your own life or work do you judge a new
+claim by whether similar claims have delivered before?</li>
+<li>Imagine a company announces a system that will “fully automate
+customer service within two years.” Using the capability-versus-hype
+lens, what questions would you ask to decide whether to believe it?</li>
+</ol>
+<h2 id="quiz-topics">Quiz Topics</h2>
+<ol type="1">
+<li>Definitions of automation and AI and how they differ from earlier
+mechanization.</li>
+<li>Narrow vs. general AI and why current systems are narrow.</li>
+<li>Symbolic AI and expert systems, and why rule-based approaches hit a
+ceiling.</li>
+<li>The AI winters and the causes of stalled progress.</li>
+<li>The shift from rule-writing to learning from data (machine learning
+/ deep learning).</li>
+<li>Why the machine-learning era took off when it did — data, compute,
+connectivity.</li>
+<li>What large models changed in practice.</li>
+<li>Distinguishing a genuine capability shift from a hype cycle using
+AI’s own history.</li>
+</ol>
+
+<div class="modnav">
+  <span><a href="lesson-12.html">← Lesson 12: The Web, Mobile, and Ubiquitous Computing</a></span>
+  <span><a href="lesson-14.html">Lesson 14: Contemporary Debates: Ethics, Environment, and the Future →</a></span>
+</div>
+</main>
+<footer class="site"><div>Produced by Forge. Learner-facing preview build.</div></footer>
+</body>
+</html>
